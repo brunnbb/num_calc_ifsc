@@ -122,20 +122,3 @@ if __name__ == "__main__":
     b = np.array([5, 1, 3], dtype=float)
     U, L, y, x = lu_decomposition(A, b)
     show_matrixes({"U": U, "L": L, "y": y, "x": x})
-    
-    
-    
-    
-    
-    
-    Ai = np.array([[1, 1, 0],
-      [2, -1, 3],
-      [-1, 0, 1]])
-
-    bi = np.array([2, 4, 0])
-    
-    #gauss_elimination(Ai, bi)
-    
-    u = np.array([[1, -1, 2], [0, 1, -1/2], [0, 0, 1]])
-    b = np.array([1, 3/2, 1])
-    #print(solve_upper_triangular(u,b))

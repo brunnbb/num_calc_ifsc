@@ -5,25 +5,18 @@ class TestBinaryDecimalConversion(unittest.TestCase):
     def test_binToDeci(self):
         self.assertAlmostEqual(binToDeci("110"), 6.0)
         self.assertAlmostEqual(binToDeci("1010"), 10.0)
-
         self.assertAlmostEqual(binToDeci("0.1"), 0.5)
         self.assertAlmostEqual(binToDeci("1.101"), 1.625)
-
         self.assertAlmostEqual(binToDeci("110.101"), 6.625)
-
         self.assertAlmostEqual(binToDeci("1001"), 9.0)
-
         self.assertAlmostEqual(binToDeci("1001."), 9.0)
 
     def test_deciToBin(self):
         self.assertEqual(deciToBin("6"), "110")
         self.assertEqual(deciToBin("10"), "1010")
-
         self.assertTrue(deciToBin("0.5").startswith("0.1"))
         self.assertTrue(deciToBin("1.625").startswith("1.101"))
-
         self.assertTrue(deciToBin("6.625").startswith("110.101"))
-        
         self.assertEqual(deciToBin("9"), "1001")
         self.assertEqual(deciToBin("9."), "1001")
 
