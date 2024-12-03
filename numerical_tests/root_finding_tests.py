@@ -36,7 +36,7 @@ if __name__ == "__main__":
     print("\nQuestion 1:")
     func_expr = "exp(x) - 2"
     print(
-        f"R: {fixed_point_method(expr=func_expr,xi= -1.8,iterations= 30,precision=1e-8):.7f}"
+        f"R: {fixed_point_method(expr=func_expr,xi= -1.8,iterations= 30,tolerance=1e-8):.7f}"
     )
 
     print("\nQuestion 2 a):")
@@ -53,29 +53,29 @@ if __name__ == "__main__":
     print("\nQuestion 1:")
     func_expr = "tan(x) - 2 * x**2"
     print(
-        f"R: {newton_method(expr = func_expr, xi = 0.5, iterations = 10, precision = 1e-8):.7f}\n"
+        f"R: {newton_method(expr = func_expr, xi = 0.5, iterations = 10, tolerance = 1e-8):.7f}\n"
     )
     print(
-        f"R: {newton_method(expr = func_expr, xi = 1.5, iterations = 10, precision = 1e-8):.7f}"
+        f"R: {newton_method(expr = func_expr, xi = 1.5, iterations = 10, tolerance = 1e-8):.7f}"
     )
     plot_tan_function(func_expr, (0, 2))
 
     print("\nQuestion 2:")
     func_expr = "cos(10 * x) - exp(-x)"
     print(
-        f"R: {newton_method(expr = func_expr, xi = 0.1, iterations = 20, precision = 1e-8):.7f}"
+        f"R: {newton_method(expr = func_expr, xi = 0.1, iterations = 20, tolerance = 1e-8):.7f}"
     )
     print(
-        f"R: {newton_method(expr = func_expr, xi = 0.5, iterations = 20, precision = 1e-8):.7f}"
+        f"R: {newton_method(expr = func_expr, xi = 0.5, iterations = 20, tolerance = 1e-8):.7f}"
     )
     print(
-        f"R: {newton_method(expr = func_expr, xi = 0.7, iterations = 20, precision = 1e-8):.7f}"
+        f"R: {newton_method(expr = func_expr, xi = 0.7, iterations = 20, tolerance = 1e-8):.7f}"
     )
     print(
-        f"R: {newton_method(expr = func_expr, xi = 1, iterations = 20, precision = 1e-8):.7f}"
+        f"R: {newton_method(expr = func_expr, xi = 1, iterations = 20, tolerance = 1e-8):.7f}"
     )
     print(
-        f"R: {newton_method(expr = func_expr, xi = 1.3, iterations = 20, precision = 1e-8):.7f}"
+        f"R: {newton_method(expr = func_expr, xi = 1.3, iterations = 20, tolerance = 1e-8):.7f}"
     )
     plot_function(func_expr, (0, 5))
 
@@ -86,6 +86,6 @@ if __name__ == "__main__":
     print("\nQuestion 1:")
 
     print(
-        f"R: {secant_method(expr = "exp(-x ** 2) - x", x1 = 0.6, x2 = 0.7, iterations = 15, precision = 1e-10):.10f}\n"
+        f"R: {secant_method(expr = "exp(-x ** 2) - x", x1 = 0.6, x2 = 0.7, iterations = 15, tolerance = 1e-10):.10f}\n"
     )
     plot_function(expr=np.e ** (-(x**2)) - x, interval=(0, 1))

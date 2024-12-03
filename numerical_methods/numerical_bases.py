@@ -32,3 +32,5 @@ def deciToBin(dec: int) -> str:
 
     bin_str = "".join(bin_array)
     return bin_str
+
+print(binToDeci(11.11))
