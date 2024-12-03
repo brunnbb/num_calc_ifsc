@@ -1,0 +1,6 @@
+To run the actually run the tests (Generic):
+python -m unittest discover -s tests
+
+With pytest (ex):
+pytest
+pytest tests/test_numerical_bases.py
