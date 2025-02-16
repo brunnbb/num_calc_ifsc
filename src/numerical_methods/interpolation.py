@@ -12,7 +12,7 @@ def lagrange_interpolation(xi: np.ndarray, yi: np.ndarray):
         for j in range(n):
             if j != i:
                 l *= (x - xi[j]) / (xi[i] - xi[j])
-        print(f'L{i}: {sp.simplify(l)}')
+        print(f'L{i}: {sp.expand(l)}')
         expr += yi[i] * l
     print(f'Lagrange polynomial: {sp.simplify(expr)}')
     return sp.lambdify(x, expr, 'numpy')

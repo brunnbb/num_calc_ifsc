@@ -24,9 +24,13 @@ def curve_fit(xi, yi, function_type: str = '1 + 1*x'):
 
     return sp.lambdify(x, fitted_function, 'numpy')
 
+def calc_residue(xi: np.ndarray, yi: np.ndarray, poly: callable): # type: ignore
+  return sum((yi-poly(xi))**2)
+
 if __name__ == '__main__':
-    xi = np.array([0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
-    yi = np.array([31, 35, 37, 33, 28, 20, 16, 15, 18, 23, 31])
-    f = curve_fit(xi, yi, function_type='1+sin(2*pi*x)+cos(2*pi*x)')
+    xi = np.array([0, 0.25, 0.5, 0.75, 1])
+    yi = np.array([-153, 64, 242, 284, 175])
+    f = curve_fit(xi, yi, function_type='1+1*x+1*x**2')
+    print(f(2))
     plot_points_and_function(xi, yi, f)
 
